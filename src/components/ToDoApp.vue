@@ -15,9 +15,13 @@ export default {
     const toDos = ref([]);
     provide("toDos", toDos);
 
+    if (localStorage.getItem("toDos")) {
+      toDos.value = JSON.parse(localStorage.getItem("toDos"));
+    }
     watchEffect(() => {
       //console.log("Nº: ", toDos.value.length);
       //console.log(toDos.value);
+      localStorage.setItem("toDos", JSON.stringify(toDos.value));
     });
   },
 };

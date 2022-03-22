@@ -24,16 +24,14 @@ export default {
   },
   setup() {
     const toDos = inject("toDos");
-    console.log(toDos.value);
     const taskRemove = (id) => {
       toDos.value = toDos.value.filter((item) => item.id !== id);
-      console.log(toDos);
+      //console.log(toDos);
     };
     const taskDone = (id) => {
       toDos.value = toDos.value.map((item) => {
         if (item.id === id) {
           item.state = true;
-          console.log(item.state);
         }
         return item;
       });
