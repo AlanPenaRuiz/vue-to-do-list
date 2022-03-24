@@ -1,10 +1,9 @@
 <template>
-  Form
   <form @submit.prevent="form">
     <input
       type="text"
-      class="main-form"
-      placeholder="Text here"
+      class="main-input"
+      placeholder="Add Task"
       v-model.trim="text"
     />
   </form>

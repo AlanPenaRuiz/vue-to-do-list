@@ -1,6 +1,6 @@
 <template>
-  Active tasks: {{ activeTasks }}
-  <button @click="removeActTasks">Remove completed tasks</button>
+  <div class="info-tasks">Active tasks: {{ activeTasks }}</div>
+  <button class="btn-rm" @click="removeActTasks">Remove completed tasks</button>
 </template>
 
 <script>
@@ -18,5 +18,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

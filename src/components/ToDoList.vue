@@ -1,12 +1,10 @@
 <template>
-  <ul>
-    <div v-if="filter.length !== 0">
-      <ToDoItem v-for="toDo in filter" :key="toDo.id" :toDo="toDo" />
-    </div>
-    <div v-else>No elements</div>
+  <div class="items">
+    <ToDoItem v-for="toDo in filter" :key="toDo.id" :toDo="toDo" />
+    <!-- <label v-else>No elements</label> -->
     <ToDoFooter />
     <ToDoFilter />
-  </ul>
+  </div>
 </template>
 <script>
 import ToDoItem from "@/components/ToDoItem.vue";
