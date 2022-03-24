@@ -14,7 +14,7 @@ import { inject, ref } from "@vue/runtime-core";
 export default {
   setup() {
     const toDos = inject("toDos");
-    const text = ref("");
+    const text = ref("All");
     const form = () => {
       if (text.value === "") {
         console.log("Empty");
